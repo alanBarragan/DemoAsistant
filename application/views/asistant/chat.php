@@ -105,9 +105,13 @@ $(function() {
             // console.log(respuesta);
             console.log(res);
             nodo = res.output.nodes_visited;
-            if(nodo == "node_5_1572018938298"){
+            console.log(nodo);
+            if(nodo.includes("node_5_1572018938298")){
                 //levanta ticket;
                 respuesta = "Estamos levantando un ticket para resolver sus dudas.";
+            }
+            if( nodo.includes("node_8_1580080192280")){
+                respuesta+= "Pausa controlada";
             }
             conversacion_text=conversacion_text+" sistema:"+respuesta;
             //si el nodo de respuesta es levantar un ticket se hace una llamada post
