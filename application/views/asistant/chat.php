@@ -97,7 +97,7 @@ $(function() {
             user_message: $('#message').val()
         }
         conversacion_text=conversacion_text+" usuario:"+$('#message').val();
-        console.log(conversacion_text);
+        // console.log(conversacion_text);
         msgUsuario();                
         $.post('<?= base_url() ?>asistant/asistente', parametros, function(res) {
             
@@ -106,9 +106,9 @@ $(function() {
             console.log(res);
             nodo = res.output.nodes_visited;
             console.log(nodo);
-            if(nodo.includes("node_5_1572018938298")){
-                //levanta ticket;
-                respuesta = "Estamos levantando un ticket para resolver sus dudas.";
+            if(nodo.includes("node_1_1580078264802")){
+                //levanta ticket; 
+                respuesta = '<img src="https://img2.freepng.es/20180329/hrq/kisspng-raffle-ticket-lottery-prize-stock-photography-ticket-5abcf21b2e0011.8189187315223321871884.jpg" alt="Trulli" width="500" height="333">';
             }
             if( nodo.includes("node_8_1580080192280")){
                 respuesta+= "Pausa controlada";
